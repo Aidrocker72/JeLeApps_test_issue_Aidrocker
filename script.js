@@ -2,11 +2,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('request-form');
   const submitBtn = document.getElementById('submit-btn');
   const errorBox = document.getElementById('error-box');
+  const passwordInput = document.getElementById('password');
+
+  function validatePassword() {
+    const pwd = passwordInput.value || '';
+    if (pwd.length < 8) {
+      errorBox.textContent = 'Пароль должен содержать минимум 8 символов.';
+      errorBox.style.display = 'block';
+      return false;
+    }
+    errorBox.textContent = '';
+    errorBox.style.display = 'none';
+    return true;
+  }
+
+  passwordInput.addEventListener('input', validatePassword);
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     errorBox.style.display = 'none';
     errorBox.textContent = '';
+
+    if (!validatePassword()) {
+      passwordInput.focus();
+      return;
+    }
 
     if (!form.checkValidity()) {
       form.reportValidity();

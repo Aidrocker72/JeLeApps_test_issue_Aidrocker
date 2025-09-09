@@ -32,4 +32,7 @@ JeLeApp_test/
 ### Для компании
 Тестовое задание выполнено для компании **JeLeApps**.
 
+### Сайт
+Проект опубликован тут: [aidrocker72.github.io/JeLeApps_test_issue_Aidrocker](https://aidrocker72.github.io/JeLeApps_test_issue_Aidrocker/)
+
 
