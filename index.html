@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Форма запроса</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  </head>
+<body>
+  <div class="container">
+    <h1>Демо-форма</h1>
+    <form id="request-form" novalidate>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email">
+        <div class="hint">Обязательное поле. Должен быть корректный email.</div>
+      </div>
+
+      <div class="field">
+        <label for="password">Пароль</label>
+        <input id="password" name="password" type="password" minlength="8" placeholder="Минимум 8 символов" required autocomplete="new-password">
+        <div class="hint">Минимум 8 символов.</div>
+      </div>
+
+      <div class="field">
+        <label for="gender">Пол</label>
+        <select id="gender" name="gender" required>
+          <option value="" selected disabled>Выберите...</option>
+          <option value="female">Женский</option>
+          <option value="male">Мужской</option>
+          <option value="other">Другое</option>
+          <option value="prefer_not_to_say">Предпочитаю не указывать</option>
+        </select>
+      </div>
+
+      <div id="error-box" class="error"></div>
+
+      <button id="submit-btn" type="submit">Отправить запрос</button>
+    </form>
+  </div>
+</body>
+</html>
+
+
